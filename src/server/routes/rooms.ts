@@ -1,7 +1,7 @@
 import { Hono } from 'hono';
 import { client } from '../lib/gameClient';
 import { sValidator } from '@hono/standard-validator';
-import { createRoomSchema } from '#/common/lib/schema';
+import { createRoomSchema } from '@/common/lib/schema';
 
 export const roomsRoute = new Hono()
     .get('/', (c) => {

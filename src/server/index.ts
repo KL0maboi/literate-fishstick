@@ -8,7 +8,7 @@ app.use('*', logger());
 
 app.route('/api/rooms', roomsRoute);
 
-app.get('/', (c) => {
+app.get('/api', (c) => {
     return c.text('Hello There!');
 });
 

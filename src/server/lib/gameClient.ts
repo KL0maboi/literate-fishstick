@@ -1,5 +1,5 @@
 import EventEmitter from 'events';
-import { createRoomSchema, type Room } from '#/common/lib/schema';
+import { createRoomSchema, type Room } from '@/common/lib/schema';
 import z from 'zod';
 
 type GameEvents = {
