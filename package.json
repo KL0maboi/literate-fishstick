@@ -5,7 +5,8 @@
     "private": true,
     "scripts": {
         "start": "bun ./src/server/index.ts",
-        "dev": "bun --watch ./src/server/index.ts"
+        "dev": "bun --watch ./src/server/index.ts",
+        "prettier": "bunx prettier --write ."
     },
     "devDependencies": {
         "@types/bun": "latest"

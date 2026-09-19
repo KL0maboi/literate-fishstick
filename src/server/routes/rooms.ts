@@ -1,10 +1,10 @@
-import { Hono } from "hono";
-import { client } from "../lib/gameClient";
-import { sValidator } from "@hono/standard-validator";
-import { createRoomSchema } from "#/common/lib/schema";
+import { Hono } from 'hono';
+import { client } from '../lib/gameClient';
+import { sValidator } from '@hono/standard-validator';
+import { createRoomSchema } from '#/common/lib/schema';
 
 export const roomsRoute = new Hono()
-    .get("/", (c) => {
+    .get('/', (c) => {
         if (!client.rooms.size) return c.json([]);
 
         return c.json(
@@ -19,8 +19,8 @@ export const roomsRoute = new Hono()
                 .toArray(),
         );
     })
-    .post("/", sValidator("json", createRoomSchema), async (c) => {
-        const data = c.req.valid("json");
+    .post('/', sValidator('json', createRoomSchema), async (c) => {
+        const data = c.req.valid('json');
 
         const room = client.createRoom(data);
 
